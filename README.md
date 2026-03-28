@@ -1,48 +1,39 @@
-# ANONE Solver - Groupe Anone
+# Tectonic Grid Solver
 
-Bienvenue sur le dépôt officiel du projet ANONE Solver réalisé par le groupe Anone (original).
+Welcome to the repository of the Tectonic Grid Solver. This complete application allows users to import, generate, and solve Tectonic puzzles.
 
-Ce projet est une application complète développée par nos soins permettant d'importer, générer et résoudre des grilles de Tectonic.
-
-Voici l'équipe ;
-
-Killian     ->  Reconnassance de chiffe/IHM/Compilation gobale
-Louna       ->  IHM
-Titouan     ->  Traitement d'image
-Pierre      ->  Solveur sat et HADOC
-Néo         ->  Solveur sat et HADOC
-
-----------
-
-## Fonctionnalités principales ;
-
-### Interface de jeu complète
-
-- Menu interactif ; au lancement choisissez si vous voulez importer votre propre grille ou en générer une aléatoirement
-- iteractive avec le clavier et la souris : selectionnez et remplissez les cases.
-- mode notes (brouillon); permet d'inscrire des petits chiffres dans le coin pour tester des hypothèses.
-- affichage adaptatif; La fenêtre est redimensionnable et l'interface s'adapte à la taille de l'écran et de la grille (dans la limite du raisonnable).
-
-### Générateur de niveaux
-
-- Création aléatoire de grilles de tailles variables (AxB avec A et B dans [5,9]²) avec zones variables.
-puis utilise un solveur SAT pour garantir que chaque grille générée possède une solution.
-la génération n'étant pas réellement optimisée, elle peut prendre un certain temps (3min max)
-
-### Importation de grille personelle
-
-- Prenez une photo d'une grille de Tectonic et importez-la.
-L'application pourra reconnaître la grille et les chiffres et ainsi reconstruire la grille complète dans l'interface.
-En parrallèle la grille sera tranférée a Minisat pour qu'il nous fournisse la grille résolue
-
-### Outils d'Assistance
-
-- Vérifier : Compare votre grille à la solution en temps réel (vert/rouge).
-- Indice : Un solveur logique vous donne le prochain coup à jouer à un moment donné.
-- Résoudre : Remplissage instantané de la grille grâce à MiniSAT.
+This project is composed of several technical domains:
+- GUI Development & Core Compilation
+- Image Processing
+- Optical Character Recognition (OCR) / Digit Recognition
+- SAT & HADOC Solvers
 
 
---------
+## Main Features
+
+### Interactive User Interface
+- **Start Menu:** Choose to import a custom grid or generate a random puzzle at startup.
+- **Input Controls:** Fully interactive with keyboard and mouse to select and fill cells.
+- **Draft Mode:** Add small corner notes to test hypotheses before committing to a number.
+- **Responsive Design:** Resizable window with a UI that dynamically adapts to screen and grid dimensions.
+
+### Level Generator
+- Random creation of grids with variable sizes (AxB, where A and B are between 5 and 9) and randomized zones.
+- Utilizes a SAT solver to guarantee that every generated grid has a valid, unique solution.
+- *Note: Grid generation is computationally intensive and may take up to 3 minutes.*
+
+### Custom Grid Import
+- Take a picture of a physical Tectonic puzzle and import the image.
+- The application processes the image, recognizes the grid layout and digits, and reconstructs the playable puzzle in the interface.
+- Concurrently, the data is sent to MiniSAT to compute the final solution.
+
+### Assistance Tools
+- **Verify:** Real-time comparison of your inputs against the solution (green/red indicators).
+- **Hint:** A logical solver provides the next best move based on your current progress.
+- **Solve:** Instantly completes the grid using MiniSAT.
 
 
-Pour lancer l'application, il faut run 'interface_tectonic.py', la fenêtre se lancera et le reste devrait être assez intuitif.
+## Getting Started
+
+To launch the application, simply run the main script:
+- **interface_tectonic.py**
