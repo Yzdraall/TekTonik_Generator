@@ -36,4 +36,4 @@ This project is composed of several technical domains:
 ## Getting Started
 
 To launch the application, simply run the main script:
-- **interface_tectonic.py**
+- 'interface_tectonic.py'
